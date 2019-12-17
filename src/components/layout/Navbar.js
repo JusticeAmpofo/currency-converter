@@ -1,6 +1,7 @@
-import React from 'react'
+import React from 'react';
+// import PropTypes from 'prop-types';
 
-export const Navbar = () => {
+const Navbar = () => {
     return (
         <nav className="nav-bar green">
             <div className="nav-wrapper">
@@ -9,5 +10,9 @@ export const Navbar = () => {
         </nav>
     )
 }
+
+// Navbar.propTypes = {
+//     addLog: PropTypes.func.isRequired
+// }
 
 export default Navbar

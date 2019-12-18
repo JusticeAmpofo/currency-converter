@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import Options from './Options';
 
 const CurrencyForm = () => {
     return (
@@ -11,19 +12,13 @@ const CurrencyForm = () => {
                                 <div className="row">
                                     <div className="input-field col s12 m6">
                                         <select>
-                                            <option value="" disabled selected>From</option>
-                                            <option value="1">Option 1</option>
-                                            <option value="2">Option 2</option>
-                                            <option value="3">Option 3</option>
+                                            <Options/>
                                         </select>
                                         <label>From</label>
                                     </div>
                                     <div className="input-field col s12 m6">
                                         <select>
-                                            <option value="" disabled selected>To</option>
-                                            <option value="1">Option 1</option>
-                                            <option value="2">Option 2</option>
-                                            <option value="3">Option 3</option>
+                                            <Options/>
                                         </select>
                                         <label>To</label>
                                     </div>
@@ -36,7 +31,7 @@ const CurrencyForm = () => {
                                 </div>
                                 <div className="row">
                                     <div className="input-field col s12">
-                                        <button class="btn waves-effect waves-light" type="submit">
+                                        <button class="btn btn-extend waves-effect waves-light green" type="submit">
                                             Convert
                                         </button>
                                     </div>

@@ -1,3 +1,8 @@
+.btn-extend {
+    display: block;
+    width: 100%;
+}
+
 /* Navbar */
 @media only screen and (max-width: 500px) {
     .nav-bar {

@@ -1,6 +1,7 @@
 import React, {Fragment, useEffect} from 'react';
 import Navbar from './components/layout/Navbar';
 import CurrencyForm from './components/currencyForm/CurrencyForm';
+import Loader from './components/layout/Loader';
 
 import 'materialize-css/dist/css/materialize.min.css';
 import M from 'materialize-css/dist/js/materialize.min.js';
@@ -19,6 +20,7 @@ function App() {
           <CurrencyForm/>
         </div>
       </section>
+      <Loader />
     </Fragment>
   );
 }

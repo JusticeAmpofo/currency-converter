@@ -1,37 +1,56 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Options from './Options';
 
 const CurrencyForm = () => {
+
+    const [amount, setAmount] = useState('');
+    const [formCurr, setFromCurrency] = useState('cad');
+    const [toCurr, setToCurrency] = useState('cad');
+
+    const onSubmit = e => { 
+        e.preventDefault();
+
+        if(isNaN(amount) || amount === '') {
+            console.log('Not a valid number bro');
+            return false
+        }
+
+        console.log(`Convert button now clicked From: ${formCurr}, To: ${toCurr}, Amount: ${amount}`);
+    };
+
+    const onChange = e => setAmount(e.target.value);
+
+
     return (
         <div className="row">
             <div className="col s12 m6 offset-m3">
                 <div className="card">
                     <div className="card-content">
                         <div className="row">
-                            <form className="col s12">
+                            <form onSubmit={onSubmit} className="col s12" formNoValidate="">
                                 <div className="row">
                                     <div className="input-field col s12 m6">
-                                        <select>
+                                        <select name="from-curr" id="from-curr" value={formCurr} onChange={e => setFromCurrency(e.target.value)} className="validate">
                                             <Options/>
                                         </select>
-                                        <label>From</label>
+                                        <label htmlFor="from-curr">From</label>
                                     </div>
                                     <div className="input-field col s12 m6">
-                                        <select>
+                                        <select name="to-curr" id="to-curr" value={toCurr} onChange={e => setToCurrency(e.target.value)} className="validate">
                                             <Options/>
                                         </select>
-                                        <label>To</label>
+                                        <label htmlFor="to-curr">To</label>
                                     </div>
                                 </div>
                                 <div className="row">
                                     <div className="input-field col s12">
-                                        <input type="number" id="amount" className="validate"/>
+                                        <input type="text" id="amount" value={amount} onChange={onChange} className="validate" />
                                         <label htmlFor="amount">Amount</label>
                                     </div>
                                 </div>
                                 <div className="row">
                                     <div className="input-field col s12">
-                                        <button class="btn btn-extend waves-effect waves-light green" type="submit">
+                                        <button className="btn btn-extend waves-effect waves-light green" type="submit">
                                             Convert
                                         </button>
                                     </div>

@@ -1,8 +1,15 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import Options from './Options';
+import Loader from '../layout/Loader';
+import CurrencyContext from '../../context/currency/currencyContext';
 
 const CurrencyForm = () => {
 
+    const currencyContext = useContext(CurrencyContext);
+
+    const { loading, convert } = currencyContext;
+
+    // Bring Currency state
     const [amount, setAmount] = useState('');
     const [formCurr, setFromCurrency] = useState('cad');
     const [toCurr, setToCurrency] = useState('cad');
@@ -16,6 +23,8 @@ const CurrencyForm = () => {
         }
 
         console.log(`Convert button now clicked From: ${formCurr}, To: ${toCurr}, Amount: ${amount}`);
+
+        convert();
     };
 
     const onChange = e => setAmount(e.target.value);
@@ -56,6 +65,9 @@ const CurrencyForm = () => {
                                     </div>
                                 </div>
                             </form>
+                        </div>
+                        <div className="row">
+                            {loading && <Loader/>}
                         </div>
                     </div>
                 </div>

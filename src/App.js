@@ -1,11 +1,12 @@
 import React, {Fragment, useEffect} from 'react';
 import Navbar from './components/layout/Navbar';
 import CurrencyForm from './components/currencyForm/CurrencyForm';
-import Loader from './components/layout/Loader';
 
 import 'materialize-css/dist/css/materialize.min.css';
 import M from 'materialize-css/dist/js/materialize.min.js';
 import './App.css';
+
+import CurrencyState from './context/currency/currencyState';
 
 function App() {
   useEffect(() => {
@@ -13,15 +14,16 @@ function App() {
     M.AutoInit();
   });
   return (
-    <Fragment>
-      <Navbar/>
-      <section className="section section-currency">
-        <div className="container">
-          <CurrencyForm/>
-        </div>
-      </section>
-      <Loader />
-    </Fragment>
+    <CurrencyState>
+      <Fragment>
+        <Navbar/>
+        <section className="section section-currency">
+          <div className="container">
+            <CurrencyForm/>
+          </div>
+        </section>
+      </Fragment>
+    </CurrencyState>
   );
 }
 

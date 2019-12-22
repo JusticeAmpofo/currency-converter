@@ -3,6 +3,11 @@
     width: 100%;
 }
 
+.amount-error {
+    border-bottom: 1px solid #F44336 !important;
+    box-shadow: 0 1px 0 0 #F44336 !important;
+}
+
 /* Navbar */
 @media only screen and (max-width: 500px) {
     .nav-bar {

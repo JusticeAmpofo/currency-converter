@@ -1,18 +1,17 @@
 import React, {Fragment} from 'react';
+import Currency from './currency';
 
 const Options = () => {
+    const list = Currency.map((item, index) => {
+        return (
+            <option key={index} value={item.base_currency_code}>
+                {item.currency_name}
+            </option>
+        )
+    });
     return (
         <Fragment>
-            <option value="CAD">CAD</option>
-            <option value="USD">USD</option>
-            <option value="JPY">JPY</option>
-            <option value="KRW">KRW</option>
-            <option value="PLN">PLN</option>
-            <option value="VND">VND</option>
-            <option value="AUD">AUD</option>
-            <option value="HKD">HKD</option>
-            <option value="BRL">BRL</option>
-            <option value="EUR">EUR</option>
+            {list}
         </Fragment>
     )
 }

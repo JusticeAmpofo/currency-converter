@@ -11,6 +11,13 @@ export default (state, action) => {
                 loading: true
             }
 
+        case  CONVERT:
+            return {
+                ...state,
+                conversion: action.payload,
+                loading: false
+            }
+
         default:
             return state;
     }

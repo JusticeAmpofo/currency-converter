@@ -7,16 +7,15 @@ import {
 }  from '../types';
 
 let apiKey;
-let proxyurl = "https://cors-anywhere.herokuapp.com/";
+let proxyurl;
 
 apiKey = '67eadf0ecce0fd2676ba4351bda7aa3fe44d3b5f';
+proxyurl = "https://cors-anywhere.herokuapp.com/";
 
 const CurrencyState = props => {
     const initialState = {
-        formCurr: [],
-        toCurr: [],
-        amount: [],
-        loading: false
+        loading: false,
+        conversion: []
     }
 
     const [state, dispatch] = useReducer(CurrencyReducer, initialState);
@@ -25,16 +24,20 @@ const CurrencyState = props => {
     const setLoading = () => dispatch({type: SET_LOADING });
 
     // Convert
-    const convert = () => {
+    const convert = (formCurr, toCurr, amount) => {
         setLoading();
 
-        fetch(`${proxyurl}https://api.getgeoapi.com/api/v2/currency/convert?api_key=67eadf0ecce0fd2676ba4351bda7aa3fe44d3b5f&from=EUR&to=GBP&amount=10&format=json`, {
+        fetch(`${proxyurl}https://api.getgeoapi.com/api/v2/currency/convert?api_key=${apiKey}&from=${formCurr}&to=${toCurr}&amount=${amount}&format=json`, {
             "method": "GET"
         })
-        .then((resp) => resp.json())
+        .then((response) => response.json())
         .then(response => {
             console.log(response);
-            console.log(response.rates.GBP.rate_for_amount);
+            console.log(response.rates[toCurr].rate_for_amount);
+            dispatch({
+                type: CONVERT,
+                payload: response
+            });
         })
         .catch(err => {
             console.log(err);
@@ -44,10 +47,8 @@ const CurrencyState = props => {
     return (
         <CurrencyContext.Provider
             value={{
-                formCurr: state.formCurr,
-                toCurr: state.toCurr,
-                amount: state.amount,
                 loading: state.loading,
+                conversion: state.conversion,
                 setLoading,
                 convert
             }}

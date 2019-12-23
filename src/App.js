@@ -1,4 +1,4 @@
-import React, {Fragment, useEffect} from 'react';
+import React, {useEffect} from 'react';
 import Navbar from './components/layout/Navbar';
 import CurrencyForm from './components/currencyForm/CurrencyForm';
 
@@ -15,14 +15,12 @@ function App() {
   });
   return (
     <CurrencyState>
-      <Fragment>
         <Navbar/>
         <section className="section section-currency">
           <div className="container">
             <CurrencyForm/>
           </div>
         </section>
-      </Fragment>
     </CurrencyState>
   );
 }

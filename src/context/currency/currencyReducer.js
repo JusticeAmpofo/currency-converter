@@ -15,6 +15,7 @@ export default (state, action) => {
             return {
                 ...state,
                 conversion: action.payload,
+                toCurrState: action.payload2,
                 loading: false
             }
 

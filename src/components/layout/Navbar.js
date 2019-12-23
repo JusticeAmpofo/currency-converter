@@ -5,7 +5,9 @@ const Navbar = () => {
     return (
         <nav className="nav-bar green">
             <div className="nav-wrapper">
-                <a href="index.html" className="brand-logo center">Currency Converter</a>
+                <a href="index.html" className="brand-logo center">
+                    Currency<br className="mobile-only"/> Converter
+                </a>
             </div>
         </nav>
     )

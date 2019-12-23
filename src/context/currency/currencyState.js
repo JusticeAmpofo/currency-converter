@@ -15,7 +15,8 @@ proxyurl = "https://cors-anywhere.herokuapp.com/";
 const CurrencyState = props => {
     const initialState = {
         loading: false,
-        conversion: []
+        conversion: [],
+        toCurrState: ''
     }
 
     const [state, dispatch] = useReducer(CurrencyReducer, initialState);
@@ -36,7 +37,8 @@ const CurrencyState = props => {
             console.log(response.rates[toCurr].rate_for_amount);
             dispatch({
                 type: CONVERT,
-                payload: response
+                payload: response,
+                payload2: response.rates[toCurr]
             });
         })
         .catch(err => {
@@ -49,6 +51,7 @@ const CurrencyState = props => {
             value={{
                 loading: state.loading,
                 conversion: state.conversion,
+                toCurrState: state.toCurrState,
                 setLoading,
                 convert
             }}

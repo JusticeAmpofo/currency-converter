@@ -8,6 +8,10 @@
     box-shadow: 0 1px 0 0 #F44336 !important;
 }
 
+br.mobile-only {
+    display: none;
+}
+
 /* Navbar */
 @media only screen and (max-width: 500px) {
     .nav-bar {
@@ -17,5 +21,9 @@
 
     .nav-bar .nav-wrapper .brand-logo {
         margin-top: 5px;
+    }
+
+    br.mobile-only {
+        display: inline;
     }
 }

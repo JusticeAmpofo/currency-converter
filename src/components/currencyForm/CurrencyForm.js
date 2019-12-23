@@ -1,6 +1,7 @@
 import React, { useState, useContext } from 'react';
 import Options from './Options';
 import Loader from '../layout/Loader';
+import Result from '../layout/Result';
 import CurrencyContext from '../../context/currency/currencyContext';
 import M from 'materialize-css/dist/js/materialize.min.js';
 
@@ -69,7 +70,7 @@ const CurrencyForm = () => {
                         <div className="row">
                             {loading && <Loader/>}
                             {(conversion.amount && !loading) && (
-                                <p>We got somthing</p>
+                                <Result />
                             )}
                         </div>
                     </div>

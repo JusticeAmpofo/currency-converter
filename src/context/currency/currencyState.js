@@ -15,7 +15,7 @@ if(process.env.NODE_ENV !== 'production') {
     proxyurl = process.env.REACT_APP_PROXY_URL;
 } else {
     apiKey = process.env.API_KEY;
-    proxyurl = process.env.PROXY_URL;
+    proxyurl = "";
 }
 
 const CurrencyState = props => {

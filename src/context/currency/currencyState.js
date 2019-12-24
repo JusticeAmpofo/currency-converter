@@ -10,13 +10,8 @@ import {
 let apiKey;
 let proxyurl;
 
-if(process.env.NODE_ENV !== 'production') {
-    apiKey = process.env.REACT_APP_API_KEY;
-    proxyurl = process.env.REACT_APP_PROXY_URL;
-} else {
-    apiKey = process.env.API_KEY;
-    proxyurl = process.env.PROXY_URL;
-}
+apiKey = process.env.REACT_APP_API_KEY;
+proxyurl = process.env.REACT_APP_PROXY_URL;
 
 const CurrencyState = props => {
     const initialState = {

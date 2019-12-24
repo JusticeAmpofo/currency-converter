@@ -2,6 +2,7 @@ import React, { useState, useContext } from 'react';
 import Options from './Options';
 import Loader from '../layout/Loader';
 import Result from '../layout/Result';
+import Error from '../layout/Error';
 import CurrencyContext from '../../context/currency/currencyContext';
 import M from 'materialize-css/dist/js/materialize.min.js';
 
@@ -9,7 +10,7 @@ const CurrencyForm = () => {
 
     const currencyContext = useContext(CurrencyContext);
 
-    const { loading, convert, conversion } = currencyContext;
+    const { loading, convert, conversion, convertError } = currencyContext;
 
     // Bring Currency state
     const [formCurr, setFromCurrency] = useState('AED');
@@ -27,7 +28,6 @@ const CurrencyForm = () => {
             return false
         }
         setError(false);
-        console.log(`Convert button now clicked From: ${formCurr}, To: ${toCurr}, Amount: ${amount}`);
         convert(formCurr, toCurr, amount);
     };
 
@@ -69,8 +69,11 @@ const CurrencyForm = () => {
                         </div>
                         <div className="row">
                             {loading && <Loader/>}
-                            {(conversion.amount && !loading) && (
+                            {(conversion && !loading) && (
                                 <Result />
+                            )}
+                            {(convertError && !loading) && (
+                                <Error />
                             )}
                         </div>
                     </div>

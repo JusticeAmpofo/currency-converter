@@ -1,6 +1,7 @@
 import {
     SET_LOADING,
-    CONVERT
+    CONVERT,
+    CONVERT_ERROR
 }  from '../types';
 
 export default (state, action) => {
@@ -16,6 +17,14 @@ export default (state, action) => {
                 ...state,
                 conversion: action.payload,
                 toCurrState: action.payload2,
+                loading: false
+            }
+
+        case CONVERT_ERROR:
+            console.log(action.payload);
+            return {
+                ...state,
+                convertError: action.payload,
                 loading: false
             }
 

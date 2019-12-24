@@ -3,20 +3,27 @@ import CurrencyContext from './currencyContext';
 import CurrencyReducer from './currencyReducer';
 import {
     SET_LOADING,
-    CONVERT
+    CONVERT,
+    CONVERT_ERROR
 }  from '../types';
 
 let apiKey;
 let proxyurl;
 
-apiKey = '67eadf0ecce0fd2676ba4351bda7aa3fe44d3b5f';
-proxyurl = "https://cors-anywhere.herokuapp.com/";
+if(process.env.NODE_ENV !== 'production') {
+    apiKey = process.env.REACT_APP_API_KEY;
+    proxyurl = process.env.REACT_APP_PROXY_URL;
+} else {
+    apiKey = process.env.API_KEY;
+    proxyurl = process.env.PROXY_URL;
+}
 
 const CurrencyState = props => {
     const initialState = {
         loading: false,
-        conversion: [],
-        toCurrState: ''
+        conversion: null,
+        toCurrState: null,
+        convertError: null
     }
 
     const [state, dispatch] = useReducer(CurrencyReducer, initialState);
@@ -33,8 +40,6 @@ const CurrencyState = props => {
         })
         .then((response) => response.json())
         .then(response => {
-            console.log(response);
-            console.log(response.rates[toCurr].rate_for_amount);
             dispatch({
                 type: CONVERT,
                 payload: response,
@@ -42,7 +47,10 @@ const CurrencyState = props => {
             });
         })
         .catch(err => {
-            console.log(err);
+            dispatch({
+                type: CONVERT_ERROR,
+                payload: err
+            })
         });
     }
 
@@ -52,6 +60,7 @@ const CurrencyState = props => {
                 loading: state.loading,
                 conversion: state.conversion,
                 toCurrState: state.toCurrState,
+                convertError: state.convertError,
                 setLoading,
                 convert
             }}

@@ -1,10 +1,12 @@
 import React, { useState, useContext } from 'react';
-import Options from './Options';
+import Currency from './currency';
 import Loader from '../layout/Loader';
 import Result from '../layout/Result';
 import Error from '../layout/Error';
 import CurrencyContext from '../../context/currency/currencyContext';
 import M from 'materialize-css/dist/js/materialize.min.js';
+
+import Select from 'react-select';
 
 const CurrencyForm = () => {
 
@@ -12,23 +14,75 @@ const CurrencyForm = () => {
 
     const { loading, convert, conversion, convertError } = currencyContext;
 
-    // Bring Currency state
-    const [formCurr, setFromCurrency] = useState('AED');
-    const [toCurr, setToCurrency] = useState('AED');
+    // Bring in Currency states
+    const [fromCurr, setFromCurrency] = useState('');
+    const [toCurr, setToCurrency] = useState('');
     const [amount, setAmount] = useState('');
+    const [errorFromCurr, setFromErrorCurr] = useState(false);
+    const [errorToCurr, setToErrorCurr] = useState(false);
     const [error, setError] = useState(false);
 
     const onChange = e => setAmount(e.target.value);
 
+    const handleFromChange = selectedOption => {
+        setFromCurrency(selectedOption.value);
+        console.log(`From selected:`, selectedOption, selectedOption.value);
+    };
+
+    const handleToChange = selectedOption => {
+        setToCurrency(selectedOption.value);
+        console.log(`To selected:`, selectedOption, selectedOption.value);
+    };
+
     const onSubmit = e => { 
         e.preventDefault();
-        if(isNaN(amount) || amount === '') {
+
+        if (fromCurr === '' || toCurr === '') {
+            M.toast({ html: 'Please fill in both Currency fields' });
+            if (fromCurr === '') {
+                setFromErrorCurr(true);
+            } else {
+                setFromErrorCurr(false);
+            } 
+
+            if (toCurr === '') {
+                setToErrorCurr(true);
+            } else {
+                setToErrorCurr(false);
+            }
+            return false
+        } else {
+            setFromErrorCurr(false);
+            setToErrorCurr(false);
+        }
+
+        if (isNaN(amount) || amount === '') {
             setError(true);
             M.toast({ html: 'Please enter a valid number' });
             return false
         }
         setError(false);
-        convert(formCurr, toCurr, amount);
+        convert(fromCurr, toCurr, amount);
+    };
+
+    const customDropStyles = {
+        control: (styles, state) => {
+            return {
+                ...styles,
+                '&:hover': { borderColor: '#4CAF50' },
+                '&:focus': { borderColor: '#4CAF50' },
+                '&:focus-within': { borderColor: '#4CAF50' },
+                boxShadow: state.isFocused ? "0 0 0 0.2rem rgba(120, 194, 173, 0.25)" : 0,
+            }
+        },
+        option: (style, state) => {
+            return {
+                ...style,
+                background: state.isFocused ? '#4CAF50' : (state.isSelected ? '#388E3C' : 'white'),
+
+            }
+
+        }
     };
 
     return (
@@ -40,16 +94,22 @@ const CurrencyForm = () => {
                             <form onSubmit={onSubmit} className="col s12" formNoValidate="">
                                 <div className="row">
                                     <div className="input-field col s12">
-                                        <select name="from-curr" id="from-curr" value={formCurr} onChange={e => setFromCurrency(e.target.value)} className="validate">
-                                            <Options/>
-                                        </select>
-                                        <label htmlFor="from-curr">From</label>
+                                        <Select
+                                            onChange={handleFromChange}
+                                            options={Currency}
+                                            placeholder="Select From Currency"
+                                            className={`custom-select custom-select-from ${errorFromCurr ? "drop-down-error" : ""}`}
+                                            styles={customDropStyles}
+                                        />
                                     </div>
                                     <div className="input-field col s12">
-                                        <select name="to-curr" id="to-curr" value={toCurr} onChange={e => setToCurrency(e.target.value)} className="validate">
-                                            <Options/>
-                                        </select>
-                                        <label htmlFor="to-curr">To</label>
+                                        <Select
+                                            onChange={handleToChange}
+                                            options={Currency}
+                                            placeholder="Select To Currency"
+                                            className={`custom-select ${errorToCurr ? "drop-down-error" : ""}`}
+                                            styles={customDropStyles}
+                                        />
                                     </div>
                                 </div>
                                 <div className="row">

@@ -1,233 +1,233 @@
 export default [{
-        base_currency_code: 'AED',
-        currency_name: 'United Arab Emirates Dirham'
+        value: 'AED',
+        label: 'United Arab Emirates Dirham'
     }, {
-        base_currency_code: 'ALL',
-        currency_name: 'Albanian Lek'
+        value: 'ALL',
+        label: 'Albanian Lek'
     }, {
-        base_currency_code: 'AMD',
-        currency_name: 'Armenian Dram'
+        value: 'AMD',
+        label: 'Armenian Dram'
     }, {
-        base_currency_code: 'ANG',
-        currency_name: 'Netherlands Antillean Guilder'
+        value: 'ANG',
+        label: 'Netherlands Antillean Guilder'
     }, {
-        base_currency_code: 'ARS',
-        currency_name: 'Argentine Peso'
+        value: 'ARS',
+        label: 'Argentine Peso'
     }, {
-        base_currency_code: 'AUD',
-        currency_name: 'Australian Dollar'
+        value: 'AUD',
+        label: 'Australian Dollar'
     }, {
-        base_currency_code: 'AZN',
-        currency_name: 'Azerbaijani Manat'
+        value: 'AZN',
+        label: 'Azerbaijani Manat'
     }, {
-        base_currency_code: 'BDT',
-        currency_name: 'Bangladeshi Taka'
+        value: 'BDT',
+        label: 'Bangladeshi Taka'
     }, {
         ase_currency_code: 'BGN',
-        currency_name: 'Bulgarian Lev'
+        label: 'Bulgarian Lev'
     }, {
-        base_currency_code: 'BHD',
-        currency_name: 'Bahraini Dinar'
+        value: 'BHD',
+        label: 'Bahraini Dinar'
     }, {
-        base_currency_code: 'BND',
-        currency_name: 'Brunei Dollar'
+        value: 'BND',
+        label: 'Brunei Dollar'
     }, {
-        base_currency_code: 'BRL',
-        currency_name: 'Brazilian Real'
+        value: 'BRL',
+        label: 'Brazilian Real'
     }, {
-        base_currency_code: 'BYN',
-        currency_name: 'Belarusian Ruble'
+        value: 'BYN',
+        label: 'Belarusian Ruble'
     }, {
-        base_currency_code: 'CAD',
-        currency_name: 'Canadian Dollar'
+        value: 'CAD',
+        label: 'Canadian Dollar'
     }, {
-        base_currency_code: 'CHF',
-        currency_name: 'Swiss Franc'
+        value: 'CHF',
+        label: 'Swiss Franc'
     }, {
-        base_currency_code: 'CLP',
-        currency_name: 'Chilean Peso'
+        value: 'CLP',
+        label: 'Chilean Peso'
     }, {
-        base_currency_code: 'CNY',
-        currency_name: 'Chinese Yuan'
+        value: 'CNY',
+        label: 'Chinese Yuan'
     }, {
-        base_currency_code: 'CZK',
-        currency_name: 'Czech Koruna'
+        value: 'CZK',
+        label: 'Czech Koruna'
     }, {
-        base_currency_code: 'DKK',
-        currency_name: 'Danish Krone'
+        value: 'DKK',
+        label: 'Danish Krone'
     }, {
-        base_currency_code: 'DZD',
-        currency_name: 'Algerian Dinar'
+        value: 'DZD',
+        label: 'Algerian Dinar'
     }, {
-        base_currency_code: 'EGP',
-        currency_name: 'Egyptian Pound'
+        value: 'EGP',
+        label: 'Egyptian Pound'
     }, {
-        base_currency_code: 'EUR',
-        currency_name: 'Euro'
+        value: 'EUR',
+        label: 'Euro'
     }, {
-        base_currency_code: 'GBP',
-        currency_name: 'Pound Sterling'
+        value: 'GBP',
+        label: 'Pound Sterling'
     }, {
-        base_currency_code: 'GEL',
-        currency_name: 'Georgian Lari'
+        value: 'GEL',
+        label: 'Georgian Lari'
     }, {
-        base_currency_code: 'GHS',
-        currency_name: 'Ghanaian Cedi'
+        value: 'GHS',
+        label: 'Ghanaian Cedi'
     }, {
-        base_currency_code: 'HKD',
-        currency_name: 'Hong Kong Dollar'
+        value: 'HKD',
+        label: 'Hong Kong Dollar'
     }, {
-        base_currency_code: 'HRK',
-        currency_name: 'Croatian Kuna'
+        value: 'HRK',
+        label: 'Croatian Kuna'
     }, {
-        base_currency_code: 'HUF',
-        currency_name: 'Hungarian Forint'
+        value: 'HUF',
+        label: 'Hungarian Forint'
     }, {
-        base_currency_code: 'IDR',
-        currency_name: 'Indonesian Rupiah'
+        value: 'IDR',
+        label: 'Indonesian Rupiah'
     }, {
-        base_currency_code: 'ILS',
-        currency_name: 'Israeli Shekel'
+        value: 'ILS',
+        label: 'Israeli Shekel'
     }, {
-        base_currency_code: 'INR',
-        currency_name: 'Indian Rupee'
+        value: 'INR',
+        label: 'Indian Rupee'
     }, {
-        base_currency_code: 'IQD',
-        currency_name: 'Iraqi Dinar'
+        value: 'IQD',
+        label: 'Iraqi Dinar'
     }, {
-        base_currency_code: 'IRR',
-        currency_name: 'Iranian Rial'
+        value: 'IRR',
+        label: 'Iranian Rial'
     }, {
-        base_currency_code: 'ISK',
-        currency_name: 'Icelandic Krona'
+        value: 'ISK',
+        label: 'Icelandic Krona'
     }, {
-        base_currency_code: 'JOD',
-        currency_name: 'Jordanian Dinar'
+        value: 'JOD',
+        label: 'Jordanian Dinar'
     }, {
-        base_currency_code: 'JPY',
-        currency_name: 'Japanese Yen'
+        value: 'JPY',
+        label: 'Japanese Yen'
     }, {
-        base_currency_code: 'KES',
-        currency_name: 'Kenyan Shilling'
+        value: 'KES',
+        label: 'Kenyan Shilling'
     }, {
-        base_currency_code: 'KGS',
-        currency_name: 'Kyrgystani Som'
+        value: 'KGS',
+        label: 'Kyrgystani Som'
     }, {
-        base_currency_code: 'KHR',
-        currency_name: 'Cambodian Riel'
+        value: 'KHR',
+        label: 'Cambodian Riel'
     }, {
-        base_currency_code: 'KRW',
-        currency_name: 'South Korean Won'
+        value: 'KRW',
+        label: 'South Korean Won'
     }, {
-        base_currency_code: 'KWD',
-        currency_name: 'Kuwaiti Dinar'
+        value: 'KWD',
+        label: 'Kuwaiti Dinar'
     }, {
-        base_currency_code: 'KZT',
-        currency_name: 'Kazakhstani Tenge'
+        value: 'KZT',
+        label: 'Kazakhstani Tenge'
     }, {
-        base_currency_code: 'LAK',
-        currency_name: 'Laotian Kip'
+        value: 'LAK',
+        label: 'Laotian Kip'
     }, {
-        base_currency_code: 'LBP',
-        currency_name: 'Lebanese Pound'
+        value: 'LBP',
+        label: 'Lebanese Pound'
     }, {
-        base_currency_code: 'LKR',
-        currency_name: 'Sri Lankan Rupee'
+        value: 'LKR',
+        label: 'Sri Lankan Rupee'
     }, {
-        base_currency_code: 'LYD',
-        currency_name: 'Libyan Dinar'
+        value: 'LYD',
+        label: 'Libyan Dinar'
     }, {
-        base_currency_code: 'MAD',
-        currency_name: 'Moroccan Dirham'
+        value: 'MAD',
+        label: 'Moroccan Dirham'
     }, {
-        base_currency_code: 'MDL',
-        currency_name: 'Moldovan Leu'
+        value: 'MDL',
+        label: 'Moldovan Leu'
     }, {
-        base_currency_code: 'MKD',
-        currency_name: 'Macedonian Denar'
+        value: 'MKD',
+        label: 'Macedonian Denar'
     }, {
-        base_currency_code: 'MMK',
-        currency_name: 'Myanma Kyat'
+        value: 'MMK',
+        label: 'Myanma Kyat'
     }, {
-        base_currency_code: 'MXN',
-        currency_name: 'Mexican Peso'
+        value: 'MXN',
+        label: 'Mexican Peso'
     }, {
-        base_currency_code: 'MYR',
-        currency_name: 'Malaysian Ringgit'
+        value: 'MYR',
+        label: 'Malaysian Ringgit'
     }, {
-        base_currency_code: 'NOK',
-        currency_name: 'Norwegian Krone'
+        value: 'NOK',
+        label: 'Norwegian Krone'
     }, {
-        base_currency_code: 'NPR',
-        currency_name: 'Nepalese Rupee'
+        value: 'NPR',
+        label: 'Nepalese Rupee'
     }, {
-        base_currency_code: 'NZD',
-        currency_name: 'New Zealand Dollar'
+        value: 'NZD',
+        label: 'New Zealand Dollar'
     }, {
-        base_currency_code: 'OMR',
-        currency_name: 'Omani Rial'
+        value: 'OMR',
+        label: 'Omani Rial'
     }, { 
-        base_currency_code: 'PHP',
-        currency_name: 'Philippine Peso'
+        value: 'PHP',
+        label: 'Philippine Peso'
     }, {
-        base_currency_code: 'PKR',
-        currency_name: 'Pakistani Rupee'
+        value: 'PKR',
+        label: 'Pakistani Rupee'
     }, {
-        base_currency_code: 'PLN',
-        currency_name: 'Polish Zloty'
+        value: 'PLN',
+        label: 'Polish Zloty'
     }, {
-        base_currency_code: 'QAR',
-        currency_name: 'Qatari Rial'
+        value: 'QAR',
+        label: 'Qatari Rial'
     }, {
-        base_currency_code: 'RON',
-        currency_name: 'Romanian Leu'
+        value: 'RON',
+        label: 'Romanian Leu'
     }, {
-        base_currency_code: 'RSD',
-        currency_name: 'Serbian Dinar'
+        value: 'RSD',
+        label: 'Serbian Dinar'
     }, {
-        base_currency_code: 'RUB',
-        currency_name: 'Russian Ruble'
+        value: 'RUB',
+        label: 'Russian Ruble'
     }, {
-        base_currency_code: 'SAR',
-        currency_name: 'Saudi Riyal'
+        value: 'SAR',
+        label: 'Saudi Riyal'
     }, {
-        base_currency_code: 'SEK',
-        currency_name: 'Swedish Krona'
+        value: 'SEK',
+        label: 'Swedish Krona'
     }, {
-        base_currency_code: 'SGD',
-        currency_name: 'Singapore Dollar'
+        value: 'SGD',
+        label: 'Singapore Dollar'
     }, {
-        base_currency_code: 'THB',
-        currency_name: 'Thai Baht'
+        value: 'THB',
+        label: 'Thai Baht'
     }, {
-        base_currency_code: 'TJS',
-        currency_name: 'Tajikistani Somoni'
+        value: 'TJS',
+        label: 'Tajikistani Somoni'
     }, {
-        base_currency_code: 'TMT',
-        currency_name: 'Turkmenistani Manat'
+        value: 'TMT',
+        label: 'Turkmenistani Manat'
     }, {
-        base_currency_code: 'TND',
-        currency_name: 'Tunisian Dinar'
+        value: 'TND',
+        label: 'Tunisian Dinar'
     }, {
-        base_currency_code: 'TRY',
-        currency_name: 'Turkish Lira'
+        value: 'TRY',
+        label: 'Turkish Lira'
     }, {
-        base_currency_code: 'TWD',
-        currency_name: 'New Taiwan Dollar'
+        value: 'TWD',
+        label: 'New Taiwan Dollar'
     }, {
-        base_currency_code: 'UAH',
-        currency_name: 'Ukrainian Hryvnia'
+        value: 'UAH',
+        label: 'Ukrainian Hryvnia'
     }, {
-        base_currency_code: 'USD',
-        currency_name: 'US Dollar'
+        value: 'USD',
+        label: 'US Dollar'
     }, {
-        base_currency_code: 'UZS',
-        currency_name: 'Uzbekistan Som'
+        value: 'UZS',
+        label: 'Uzbekistan Som'
     }, {
-        base_currency_code: 'VND',
-        currency_name: 'Vietnamese Dong'
+        value: 'VND',
+        label: 'Vietnamese Dong'
     }, {
-        base_currency_code: 'ZAR',
-        currency_name: 'South African Rand'
+        value: 'ZAR',
+        label: 'South African Rand'
     }
 ]

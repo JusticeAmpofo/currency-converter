@@ -1,6 +1,26 @@
+.custom-select {
+    z-index: 2;
+}
+
+.custom-select:focus span {
+    outline: #4CAF50;
+}
+
+.styled__control-is-focused {
+    outline: #4CAF50;
+}
+
+.custom-select-from {
+    z-index: 3;
+}
+
 .btn-extend {
     display: block;
     width: 100%;
+}
+
+.drop-down-error {
+    border: 1px solid #F44336 !important;
 }
 
 .amount-error {

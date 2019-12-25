@@ -27,10 +27,10 @@ const CurrencyState = props => {
     const setLoading = () => dispatch({type: SET_LOADING });
 
     // Convert
-    const convert = (formCurr, toCurr, amount) => {
+    const convert = (fromCurr, toCurr, amount) => {
         setLoading();
 
-        fetch(`${proxyurl}https://api.getgeoapi.com/api/v2/currency/convert?api_key=${apiKey}&from=${formCurr}&to=${toCurr}&amount=${amount}&format=json`, {
+        fetch(`${proxyurl}https://api.getgeoapi.com/api/v2/currency/convert?api_key=${apiKey}&from=${fromCurr}&to=${toCurr}&amount=${amount}&format=json`, {
             "method": "GET"
         })
         .then((response) => response.json())

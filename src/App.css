@@ -2,14 +2,6 @@
     z-index: 2;
 }
 
-.custom-select:focus span {
-    outline: #4CAF50;
-}
-
-.styled__control-is-focused {
-    outline: #4CAF50;
-}
-
 .custom-select-from {
     z-index: 3;
 }

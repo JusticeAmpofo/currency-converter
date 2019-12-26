@@ -79,9 +79,7 @@ const CurrencyForm = () => {
             return {
                 ...style,
                 background: state.isFocused ? '#4CAF50' : (state.isSelected ? '#388E3C' : 'white'),
-
             }
-
         }
     };
 

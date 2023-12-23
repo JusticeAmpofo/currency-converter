@@ -25,12 +25,10 @@ const CurrencyForm = () => {
 
 	const handleFromChange = (selectedOption) => {
 		setFromCurrency(selectedOption.value);
-		console.log(`From selected:`, selectedOption, selectedOption.value);
 	};
 
 	const handleToChange = (selectedOption) => {
 		setToCurrency(selectedOption.value);
-		console.log(`To selected:`, selectedOption, selectedOption.value);
 	};
 
 	const onSubmit = (e) => {

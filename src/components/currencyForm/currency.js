@@ -1,4 +1,4 @@
-export default [
+const currencies = [
 	{
 		value: 'AED',
 		label: 'United Arab Emirates Dirham',
@@ -308,3 +308,5 @@ export default [
 		label: 'South African Rand',
 	},
 ];
+
+export default currencies;

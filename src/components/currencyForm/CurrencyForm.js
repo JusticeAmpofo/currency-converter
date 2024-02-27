@@ -1,5 +1,5 @@
 import React, { useState, useContext } from 'react';
-import Currency from './currency';
+import currencies from './currency';
 import Loader from '../layout/Loader';
 import Result from '../layout/Result';
 import Error from '../layout/Error';
@@ -97,7 +97,7 @@ const CurrencyForm = () => {
 									<div className="input-field col s12">
 										<Select
 											onChange={handleFromChange}
-											options={Currency}
+											options={currencies}
 											placeholder="Select From Currency"
 											className={`custom-select custom-select-from ${
 												errorFromCurr ? 'drop-down-error' : ''
@@ -108,7 +108,7 @@ const CurrencyForm = () => {
 									<div className="input-field col s12">
 										<Select
 											onChange={handleToChange}
-											options={Currency}
+											options={currencies}
 											placeholder="Select To Currency"
 											className={`custom-select ${
 												errorToCurr ? 'drop-down-error' : ''
